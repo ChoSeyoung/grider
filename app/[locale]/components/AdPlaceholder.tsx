@@ -1,24 +1,53 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
+
 interface AdPlaceholderProps {
   type: 'banner' | 'sidebar' | 'inline';
   className?: string;
 }
 
+declare global {
+  interface Window {
+    adsbygoogle: unknown[];
+  }
+}
+
 export default function AdPlaceholder({ type, className = '' }: AdPlaceholderProps) {
+  const adRef = useRef<HTMLModElement>(null);
+  const isAdLoaded = useRef(false);
+
   const sizeClasses = {
-    banner: 'w-full h-[90px] md:h-[90px]', // 728x90 or responsive
-    sidebar: 'w-full h-[250px] md:w-[300px] md:h-[250px]', // 300x250
-    inline: 'w-full h-[100px] md:h-[90px]', // Responsive inline
+    banner: 'w-full min-h-[90px]',
+    sidebar: 'w-full min-h-[250px]',
+    inline: 'w-full min-h-[100px]',
   };
+
+  useEffect(() => {
+    if (adRef.current && !isAdLoaded.current) {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        isAdLoaded.current = true;
+      } catch (error) {
+        console.error('AdSense error:', error);
+      }
+    }
+  }, []);
 
   return (
     <div
-      className={`ad-placeholder ${sizeClasses[type]} ${className}`}
+      className={`ad-container ${sizeClasses[type]} ${className}`}
       role="complementary"
       aria-label="Advertisement"
     >
-      <span className="text-xs text-gray-500">AD</span>
+      <ins
+        ref={adRef}
+        className="adsbygoogle"
+        style={{ display: 'block' }}
+        data-ad-client="ca-pub-4595496614643694"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
     </div>
   );
 }

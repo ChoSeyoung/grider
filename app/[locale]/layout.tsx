@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { routing, locales, Locale } from '../../src/i18n/routing';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import Script from 'next/script';
 import '../globals.css';
 
 const geistSans = Geist({
@@ -88,6 +89,12 @@ export default async function LocaleLayout({ children, params }: Props) {
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4595496614643694"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
