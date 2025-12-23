@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useId } from 'react';
 
 interface AdPlaceholderProps {
   type: 'banner' | 'sidebar' | 'inline';
@@ -16,22 +16,33 @@ declare global {
 export default function AdPlaceholder({ type, className = '' }: AdPlaceholderProps) {
   const adRef = useRef<HTMLModElement>(null);
   const isAdLoaded = useRef(false);
+  const uniqueId = useId();
 
   const sizeClasses = {
     banner: 'w-full min-h-[90px]',
-    sidebar: 'w-full min-h-[250px]',
+    sidebar: 'w-[300px] min-h-[250px]',
     inline: 'w-full min-h-[100px]',
   };
 
+  const adStyles = {
+    banner: { display: 'block' },
+    sidebar: { display: 'inline-block', width: '300px', height: '250px' },
+    inline: { display: 'block' },
+  };
+
   useEffect(() => {
-    if (adRef.current && !isAdLoaded.current) {
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-        isAdLoaded.current = true;
-      } catch (error) {
-        console.error('AdSense error:', error);
+    const timer = setTimeout(() => {
+      if (adRef.current && !isAdLoaded.current) {
+        try {
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+          isAdLoaded.current = true;
+        } catch (error) {
+          console.error('AdSense error:', error);
+        }
       }
-    }
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -41,12 +52,13 @@ export default function AdPlaceholder({ type, className = '' }: AdPlaceholderPro
       aria-label="Advertisement"
     >
       <ins
+        key={uniqueId}
         ref={adRef}
         className="adsbygoogle"
-        style={{ display: 'block' }}
+        style={adStyles[type]}
         data-ad-client="ca-pub-4595496614643694"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
+        data-ad-format={type === 'sidebar' ? 'rectangle' : 'auto'}
+        data-full-width-responsive={type !== 'sidebar' ? 'true' : 'false'}
       />
     </div>
   );
