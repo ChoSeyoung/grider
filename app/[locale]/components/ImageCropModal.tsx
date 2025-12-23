@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 import Cropper from 'react-easy-crop';
 import { Area, Point } from 'react-easy-crop';
 import { getCroppedImg } from '../hooks/useImageCrop';
@@ -16,6 +17,7 @@ export default function ImageCropModal({
   onCropComplete,
   onCancel,
 }: ImageCropModalProps) {
+  const t = useTranslations('crop');
   const [crop, setCrop] = useState<Point>({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState<Area | null>(null);
@@ -50,7 +52,7 @@ export default function ImageCropModal({
     <div className="modal-overlay" onClick={onCancel}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <h2 className="text-2xl font-bold gradient-text mb-6 text-center">
-          Crop Image
+          {t('title')}
         </h2>
 
         <div className="crop-container mb-6">
@@ -67,7 +69,7 @@ export default function ImageCropModal({
 
         <div className="mb-6">
           <label className="block text-sm text-[var(--text-secondary)] mb-2">
-            Zoom
+            {t('zoom')}
           </label>
           <input
             type="range"
@@ -82,10 +84,10 @@ export default function ImageCropModal({
 
         <div className="flex gap-4 justify-center">
           <button className="btn-secondary" onClick={onCancel}>
-            Cancel
+            {t('cancel')}
           </button>
           <button className="btn-gradient" onClick={handleConfirm}>
-            Confirm
+            {t('confirm')}
           </button>
         </div>
       </div>

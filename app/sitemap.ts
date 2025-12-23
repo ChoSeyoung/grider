@@ -1,14 +1,19 @@
 import { MetadataRoute } from 'next';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://grider-kappa.vercel.app';
+const locales = ['en', 'ko', 'ja', 'zh', 'es', 'fr', 'de', 'pt'];
 
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://grider-kappa.vercel.app';
+
+  return locales.map((locale) => ({
+    url: `${baseUrl}/${locale}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: locale === 'en' ? 1 : 0.9,
+    alternates: {
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `${baseUrl}/${l}`])
+      ),
     },
-  ];
+  }));
 }

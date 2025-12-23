@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Grider - Creador de Cuadrículas de Fotos Gratis | Crea Diseños Hermosos",
+    "description": "Crea impresionantes cuadrículas de fotos gratis. Elige entre múltiples diseños, personaliza espacios, esquinas y fondos. Descarga como PNG al instante. Sin registro."
+  },
+  "home": {
+    "title": "Grider",
+    "subtitle": "Crea hermosos diseños de fotos",
+    "howManyPhotos": "¿Cuántas fotos?",
+    "start": "Comenzar"
+  },
+  "layout": {
+    "title": "Elegir Diseño",
+    "photosPerRow": "¿Cuántas fotos por fila?",
+    "columns": "columnas",
+    "rows": "filas",
+    "back": "Atrás",
+    "continue": "Continuar"
+  },
+  "editor": {
+    "title": "Edita Tu Cuadrícula",
+    "subtitle": "Haz clic para agregar fotos, arrastra para reorganizar",
+    "reset": "Reiniciar",
+    "download": "Descargar",
+    "saving": "Guardando...",
+    "fillAllSlots": "Llena todos los espacios para descargar"
+  },
+  "options": {
+    "title": "Opciones",
+    "imageGap": "Espacio entre Imágenes",
+    "cornerStyle": "Estilo de Esquinas",
+    "backgroundColor": "Color de Fondo",
+    "gap": {
+      "none": "Ninguno",
+      "small": "Pequeño",
+      "medium": "Medio",
+      "large": "Grande"
+    },
+    "corner": {
+      "square": "Cuadrado",
+      "slight": "Ligero",
+      "rounded": "Redondeado",
+      "circle": "Círculo"
+    }
+  },
+  "crop": {
+    "title": "Recortar Imagen",
+    "zoom": "Zoom",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Grider - Free Photo Grid Maker | Create Beautiful Layouts",
+    "description": "Create stunning photo grid layouts for free. Choose from multiple layouts, customize gaps, corners, and backgrounds. Download as PNG instantly. No signup required."
+  },
+  "home": {
+    "title": "Grider",
+    "subtitle": "Create beautiful photo layouts",
+    "howManyPhotos": "How many photos?",
+    "start": "Start"
+  },
+  "layout": {
+    "title": "Choose Layout",
+    "photosPerRow": "How many photos per row?",
+    "columns": "columns",
+    "rows": "rows",
+    "back": "Back",
+    "continue": "Continue"
+  },
+  "editor": {
+    "title": "Edit Your Grid",
+    "subtitle": "Click to add photos, drag to rearrange",
+    "reset": "Reset",
+    "download": "Download",
+    "saving": "Saving...",
+    "fillAllSlots": "Fill all slots to enable download"
+  },
+  "options": {
+    "title": "Options",
+    "imageGap": "Image Gap",
+    "cornerStyle": "Corner Style",
+    "backgroundColor": "Background Color",
+    "gap": {
+      "none": "None",
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large"
+    },
+    "corner": {
+      "square": "Square",
+      "slight": "Slight",
+      "rounded": "Rounded",
+      "circle": "Circle"
+    }
+  },
+  "crop": {
+    "title": "Crop Image",
+    "zoom": "Zoom",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  }
+}

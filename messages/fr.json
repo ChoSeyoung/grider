@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Grider - Créateur de Grilles Photo Gratuit | Créez de Beaux Designs",
+    "description": "Créez de superbes grilles photo gratuitement. Choisissez parmi plusieurs mises en page, personnalisez les espaces, coins et arrière-plans. Téléchargez en PNG instantanément. Sans inscription."
+  },
+  "home": {
+    "title": "Grider",
+    "subtitle": "Créez de belles mises en page photo",
+    "howManyPhotos": "Combien de photos ?",
+    "start": "Commencer"
+  },
+  "layout": {
+    "title": "Choisir la Mise en Page",
+    "photosPerRow": "Combien de photos par ligne ?",
+    "columns": "colonnes",
+    "rows": "lignes",
+    "back": "Retour",
+    "continue": "Continuer"
+  },
+  "editor": {
+    "title": "Éditez Votre Grille",
+    "subtitle": "Cliquez pour ajouter des photos, glissez pour réorganiser",
+    "reset": "Réinitialiser",
+    "download": "Télécharger",
+    "saving": "Enregistrement...",
+    "fillAllSlots": "Remplissez tous les emplacements pour télécharger"
+  },
+  "options": {
+    "title": "Options",
+    "imageGap": "Espacement des Images",
+    "cornerStyle": "Style des Coins",
+    "backgroundColor": "Couleur de Fond",
+    "gap": {
+      "none": "Aucun",
+      "small": "Petit",
+      "medium": "Moyen",
+      "large": "Grand"
+    },
+    "corner": {
+      "square": "Carré",
+      "slight": "Léger",
+      "rounded": "Arrondi",
+      "circle": "Cercle"
+    }
+  },
+  "crop": {
+    "title": "Recadrer l'Image",
+    "zoom": "Zoom",
+    "cancel": "Annuler",
+    "confirm": "Confirmer"
+  }
+}

@@ -11,17 +11,17 @@ export const defaultGridOptions: GridOptions = {
 };
 
 export const gapOptions = [
-  { value: 0, label: 'None' },
-  { value: 4, label: 'Small' },
-  { value: 8, label: 'Medium' },
-  { value: 16, label: 'Large' },
+  { value: 0, key: 'none' },
+  { value: 4, key: 'small' },
+  { value: 8, key: 'medium' },
+  { value: 16, key: 'large' },
 ];
 
 export const borderRadiusOptions = [
-  { value: 0, label: 'Square' },
-  { value: 8, label: 'Slight' },
-  { value: 16, label: 'Rounded' },
-  { value: 9999, label: 'Circle' },
+  { value: 0, key: 'square' },
+  { value: 8, key: 'slight' },
+  { value: 16, key: 'rounded' },
+  { value: 9999, key: 'circle' },
 ];
 
 export const backgroundColorOptions = [

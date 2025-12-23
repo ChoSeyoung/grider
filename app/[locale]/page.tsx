@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 import PhotoCountSelector from './components/PhotoCountSelector';
 import LayoutSelector from './components/LayoutSelector';
 import PhotoGrid from './components/PhotoGrid';
@@ -25,6 +26,7 @@ interface CropState {
 }
 
 export default function Home() {
+  const t = useTranslations('editor');
   const [step, setStep] = useState<Step>('count');
   const [photoCount, setPhotoCount] = useState<PhotoCount | null>(4);
   const [selectedLayout, setSelectedLayout] = useState<Layout | null>(null);
@@ -178,10 +180,10 @@ export default function Home() {
               <div className="editor-main">
                 <div className="text-center">
                   <h1 className="text-3xl font-bold gradient-text mb-2">
-                    Edit Your Grid
+                    {t('title')}
                   </h1>
                   <p className="text-[var(--text-secondary)]">
-                    Click to add photos, drag to rearrange
+                    {t('subtitle')}
                   </p>
                 </div>
 
@@ -196,7 +198,7 @@ export default function Home() {
 
                 <div className="flex gap-2 sm:gap-4">
                   <button className="btn-secondary whitespace-nowrap text-sm sm:text-base px-4 sm:px-8" onClick={handleReset}>
-                    Reset
+                    {t('reset')}
                   </button>
                   <DownloadButton
                     targetId="photo-grid"
@@ -206,7 +208,7 @@ export default function Home() {
 
                 {!allSlotsFilled && (
                   <p className="text-[var(--text-secondary)] text-sm">
-                    Fill all slots to enable download
+                    {t('fillAllSlots')}
                   </p>
                 )}
 

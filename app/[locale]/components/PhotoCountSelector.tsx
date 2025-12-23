@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { photoCounts, PhotoCount } from '../utils/layouts';
 
 interface PhotoCountSelectorProps {
@@ -13,17 +14,19 @@ export default function PhotoCountSelector({
   onSelect,
   onStart,
 }: PhotoCountSelectorProps) {
+  const t = useTranslations('home');
+
   return (
     <div className="flex flex-col items-center gap-12">
       <div className="text-center">
-        <h1 className="text-4xl font-bold gradient-text mb-4">Grider</h1>
+        <h1 className="text-4xl font-bold gradient-text mb-4">{t('title')}</h1>
         <p className="text-[var(--text-secondary)] text-lg">
-          Create beautiful photo layouts
+          {t('subtitle')}
         </p>
       </div>
 
       <div className="flex flex-col items-center gap-8">
-        <h2 className="text-xl font-medium">How many photos?</h2>
+        <h2 className="text-xl font-medium">{t('howManyPhotos')}</h2>
 
         <div className="grid grid-cols-2 gap-4">
           {photoCounts.map((count) => (
@@ -42,7 +45,7 @@ export default function PhotoCountSelector({
           disabled={selectedCount === null}
           onClick={onStart}
         >
-          Start
+          {t('start')}
         </button>
       </div>
     </div>

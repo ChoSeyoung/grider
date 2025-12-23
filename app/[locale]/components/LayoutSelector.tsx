@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import {
   Layout,
   PhotoCount,
@@ -36,6 +37,7 @@ export default function LayoutSelector({
   onConfirm,
   onBack,
 }: LayoutSelectorProps) {
+  const t = useTranslations('layout');
   const columnOptions = getColumnOptions(photoCount);
   const [selectedCols, setSelectedCols] = useState(() => getDefaultColumns(photoCount));
 
@@ -52,9 +54,9 @@ export default function LayoutSelector({
   return (
     <div className="flex flex-col items-center gap-8">
       <div className="text-center">
-        <h1 className="text-3xl font-bold gradient-text mb-2">Choose Layout</h1>
+        <h1 className="text-3xl font-bold gradient-text mb-2">{t('title')}</h1>
         <p className="text-[var(--text-secondary)]">
-          How many photos per row?
+          {t('photosPerRow')}
         </p>
       </div>
 
@@ -83,15 +85,15 @@ export default function LayoutSelector({
       </div>
 
       <p className="text-[var(--text-secondary)] text-sm">
-        {currentLayout.cols} columns × {currentLayout.rows} rows
+        {currentLayout.cols} {t('columns')} × {currentLayout.rows} {t('rows')}
       </p>
 
       <div className="flex gap-4">
         <button className="btn-secondary" onClick={onBack}>
-          Back
+          {t('back')}
         </button>
         <button className="btn-gradient" onClick={handleConfirm}>
-          Continue
+          {t('continue')}
         </button>
       </div>
     </div>

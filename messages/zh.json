@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Grider - 免费照片网格制作器 | 创建精美布局",
+    "description": "免费创建精美的照片网格布局。选择多种布局，自定义间距、圆角和背景。即时下载PNG。无需注册。"
+  },
+  "home": {
+    "title": "Grider",
+    "subtitle": "创建精美的照片布局",
+    "howManyPhotos": "使用多少张照片？",
+    "start": "开始"
+  },
+  "layout": {
+    "title": "选择布局",
+    "photosPerRow": "每行多少张？",
+    "columns": "列",
+    "rows": "行",
+    "back": "返回",
+    "continue": "继续"
+  },
+  "editor": {
+    "title": "编辑网格",
+    "subtitle": "点击添加照片，拖动重新排列",
+    "reset": "重置",
+    "download": "下载",
+    "saving": "保存中...",
+    "fillAllSlots": "填满所有格子后即可下载"
+  },
+  "options": {
+    "title": "选项",
+    "imageGap": "图片间距",
+    "cornerStyle": "圆角样式",
+    "backgroundColor": "背景颜色",
+    "gap": {
+      "none": "无",
+      "small": "小",
+      "medium": "中",
+      "large": "大"
+    },
+    "corner": {
+      "square": "直角",
+      "slight": "微圆",
+      "rounded": "圆角",
+      "circle": "圆形"
+    }
+  },
+  "crop": {
+    "title": "裁剪图片",
+    "zoom": "缩放",
+    "cancel": "取消",
+    "confirm": "确认"
+  }
+}

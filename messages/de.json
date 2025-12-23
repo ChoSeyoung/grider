@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Grider - Kostenloser Fotoraster-Ersteller | Erstelle Schöne Layouts",
+    "description": "Erstelle kostenlos beeindruckende Fotoraster-Layouts. Wähle aus mehreren Layouts, passe Abstände, Ecken und Hintergründe an. Sofort als PNG herunterladen. Keine Anmeldung erforderlich."
+  },
+  "home": {
+    "title": "Grider",
+    "subtitle": "Erstelle schöne Foto-Layouts",
+    "howManyPhotos": "Wie viele Fotos?",
+    "start": "Starten"
+  },
+  "layout": {
+    "title": "Layout Wählen",
+    "photosPerRow": "Wie viele Fotos pro Reihe?",
+    "columns": "Spalten",
+    "rows": "Zeilen",
+    "back": "Zurück",
+    "continue": "Weiter"
+  },
+  "editor": {
+    "title": "Raster Bearbeiten",
+    "subtitle": "Klicken zum Hinzufügen, Ziehen zum Neuanordnen",
+    "reset": "Zurücksetzen",
+    "download": "Herunterladen",
+    "saving": "Speichern...",
+    "fillAllSlots": "Fülle alle Plätze zum Herunterladen"
+  },
+  "options": {
+    "title": "Optionen",
+    "imageGap": "Bildabstand",
+    "cornerStyle": "Eckenstil",
+    "backgroundColor": "Hintergrundfarbe",
+    "gap": {
+      "none": "Kein",
+      "small": "Klein",
+      "medium": "Mittel",
+      "large": "Groß"
+    },
+    "corner": {
+      "square": "Eckig",
+      "slight": "Leicht",
+      "rounded": "Gerundet",
+      "circle": "Kreis"
+    }
+  },
+  "crop": {
+    "title": "Bild Zuschneiden",
+    "zoom": "Zoom",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen"
+  }
+}

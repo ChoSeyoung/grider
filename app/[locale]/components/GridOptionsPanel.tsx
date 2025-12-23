@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import {
   GridOptions,
   gapOptions,
@@ -16,6 +17,7 @@ export default function GridOptionsPanel({
   options,
   onChange,
 }: GridOptionsPanelProps) {
+  const t = useTranslations('options');
   const handleGapChange = (gap: number) => {
     onChange({ ...options, gap });
   };
@@ -30,12 +32,12 @@ export default function GridOptionsPanel({
 
   return (
     <div className="card w-full max-w-md">
-      <h3 className="text-lg font-semibold mb-4 gradient-text">Options</h3>
+      <h3 className="text-lg font-semibold mb-4 gradient-text">{t('title')}</h3>
 
       {/* Gap Option */}
       <div className="mb-5">
         <label className="block text-sm text-[var(--text-secondary)] mb-2">
-          Image Gap
+          {t('imageGap')}
         </label>
         <div className="grid grid-cols-2 gap-2">
           {gapOptions.map((opt) => (
@@ -44,7 +46,7 @@ export default function GridOptionsPanel({
               className={`option-btn ${options.gap === opt.value ? 'selected' : ''}`}
               onClick={() => handleGapChange(opt.value)}
             >
-              {opt.label}
+              {t(`gap.${opt.key}`)}
             </button>
           ))}
         </div>
@@ -53,7 +55,7 @@ export default function GridOptionsPanel({
       {/* Border Radius Option */}
       <div className="mb-5">
         <label className="block text-sm text-[var(--text-secondary)] mb-2">
-          Corner Style
+          {t('cornerStyle')}
         </label>
         <div className="grid grid-cols-2 gap-2">
           {borderRadiusOptions.map((opt) => (
@@ -62,7 +64,7 @@ export default function GridOptionsPanel({
               className={`option-btn ${options.borderRadius === opt.value ? 'selected' : ''}`}
               onClick={() => handleBorderRadiusChange(opt.value)}
             >
-              {opt.label}
+              {t(`corner.${opt.key}`)}
             </button>
           ))}
         </div>
@@ -71,7 +73,7 @@ export default function GridOptionsPanel({
       {/* Background Color Option */}
       <div>
         <label className="block text-sm text-[var(--text-secondary)] mb-2">
-          Background Color
+          {t('backgroundColor')}
         </label>
         <div className="flex gap-2 flex-wrap">
           {backgroundColorOptions.map((opt) => (

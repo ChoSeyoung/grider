@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Grider - Criador de Grade de Fotos Grátis | Crie Layouts Bonitos",
+    "description": "Crie grades de fotos impressionantes gratuitamente. Escolha entre vários layouts, personalize espaços, cantos e fundos. Baixe como PNG instantaneamente. Sem cadastro."
+  },
+  "home": {
+    "title": "Grider",
+    "subtitle": "Crie layouts de fotos bonitos",
+    "howManyPhotos": "Quantas fotos?",
+    "start": "Começar"
+  },
+  "layout": {
+    "title": "Escolher Layout",
+    "photosPerRow": "Quantas fotos por linha?",
+    "columns": "colunas",
+    "rows": "linhas",
+    "back": "Voltar",
+    "continue": "Continuar"
+  },
+  "editor": {
+    "title": "Edite Sua Grade",
+    "subtitle": "Clique para adicionar fotos, arraste para reorganizar",
+    "reset": "Reiniciar",
+    "download": "Baixar",
+    "saving": "Salvando...",
+    "fillAllSlots": "Preencha todos os espaços para baixar"
+  },
+  "options": {
+    "title": "Opções",
+    "imageGap": "Espaço entre Imagens",
+    "cornerStyle": "Estilo dos Cantos",
+    "backgroundColor": "Cor de Fundo",
+    "gap": {
+      "none": "Nenhum",
+      "small": "Pequeno",
+      "medium": "Médio",
+      "large": "Grande"
+    },
+    "corner": {
+      "square": "Quadrado",
+      "slight": "Leve",
+      "rounded": "Arredondado",
+      "circle": "Círculo"
+    }
+  },
+  "crop": {
+    "title": "Cortar Imagem",
+    "zoom": "Zoom",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar"
+  }
+}

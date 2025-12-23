@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Grider - 무료 사진 그리드 메이커 | 아름다운 레이아웃 만들기",
+    "description": "무료로 멋진 사진 그리드 레이아웃을 만드세요. 다양한 레이아웃, 여백, 모서리, 배경색을 커스터마이즈하고 PNG로 바로 다운로드하세요. 회원가입 필요 없음."
+  },
+  "home": {
+    "title": "Grider",
+    "subtitle": "아름다운 사진 레이아웃 만들기",
+    "howManyPhotos": "몇 장의 사진을 사용할까요?",
+    "start": "시작"
+  },
+  "layout": {
+    "title": "레이아웃 선택",
+    "photosPerRow": "한 줄에 몇 장?",
+    "columns": "열",
+    "rows": "행",
+    "back": "뒤로",
+    "continue": "계속"
+  },
+  "editor": {
+    "title": "그리드 편집",
+    "subtitle": "클릭하여 사진 추가, 드래그하여 재배치",
+    "reset": "초기화",
+    "download": "다운로드",
+    "saving": "저장 중...",
+    "fillAllSlots": "다운로드하려면 모든 칸을 채우세요"
+  },
+  "options": {
+    "title": "옵션",
+    "imageGap": "이미지 간격",
+    "cornerStyle": "모서리 스타일",
+    "backgroundColor": "배경색",
+    "gap": {
+      "none": "없음",
+      "small": "좁게",
+      "medium": "보통",
+      "large": "넓게"
+    },
+    "corner": {
+      "square": "직각",
+      "slight": "약간",
+      "rounded": "둥글게",
+      "circle": "원형"
+    }
+  },
+  "crop": {
+    "title": "이미지 자르기",
+    "zoom": "확대",
+    "cancel": "취소",
+    "confirm": "확인"
+  }
+}

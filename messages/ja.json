@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Grider - 無料フォトグリッドメーカー | 美しいレイアウトを作成",
+    "description": "無料で素敵なフォトグリッドレイアウトを作成。複数のレイアウト、間隔、角、背景をカスタマイズ。PNGで即座にダウンロード。登録不要。"
+  },
+  "home": {
+    "title": "Grider",
+    "subtitle": "美しいフォトレイアウトを作成",
+    "howManyPhotos": "何枚の写真を使いますか？",
+    "start": "開始"
+  },
+  "layout": {
+    "title": "レイアウトを選択",
+    "photosPerRow": "1行に何枚？",
+    "columns": "列",
+    "rows": "行",
+    "back": "戻る",
+    "continue": "続ける"
+  },
+  "editor": {
+    "title": "グリッドを編集",
+    "subtitle": "クリックで写真を追加、ドラッグで並べ替え",
+    "reset": "リセット",
+    "download": "ダウンロード",
+    "saving": "保存中...",
+    "fillAllSlots": "ダウンロードするにはすべてのスロットを埋めてください"
+  },
+  "options": {
+    "title": "オプション",
+    "imageGap": "画像の間隔",
+    "cornerStyle": "角のスタイル",
+    "backgroundColor": "背景色",
+    "gap": {
+      "none": "なし",
+      "small": "小",
+      "medium": "中",
+      "large": "大"
+    },
+    "corner": {
+      "square": "四角",
+      "slight": "少し丸く",
+      "rounded": "丸く",
+      "circle": "円形"
+    }
+  },
+  "crop": {
+    "title": "画像を切り抜き",
+    "zoom": "ズーム",
+    "cancel": "キャンセル",
+    "confirm": "確認"
+  }
+}

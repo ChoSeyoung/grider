@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { toPng } from 'html-to-image';
 
 interface DownloadButtonProps {
@@ -12,6 +13,7 @@ export default function DownloadButton({
   targetId,
   disabled = false,
 }: DownloadButtonProps) {
+  const t = useTranslations('editor');
   const [isDownloading, setIsDownloading] = useState(false);
 
   const handleDownload = async () => {
@@ -44,7 +46,7 @@ export default function DownloadButton({
       onClick={handleDownload}
       disabled={disabled || isDownloading}
     >
-      {isDownloading ? 'Saving...' : 'Download'}
+      {isDownloading ? t('saving') : t('download')}
     </button>
   );
 }
