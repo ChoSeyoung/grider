@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://grider.app'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://grider-kappa.vercel.app'),
   title: {
     default: "Grider - Free Photo Grid Maker | Create Beautiful Layouts",
     template: "%s | Grider",
