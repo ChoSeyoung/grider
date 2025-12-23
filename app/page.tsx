@@ -1,65 +1,251 @@
-import Image from "next/image";
+'use client';
+
+import { useState, useCallback } from 'react';
+import PhotoCountSelector from './components/PhotoCountSelector';
+import LayoutSelector from './components/LayoutSelector';
+import PhotoGrid from './components/PhotoGrid';
+import ImageCropModal from './components/ImageCropModal';
+import DownloadButton from './components/DownloadButton';
+import GridOptionsPanel from './components/GridOptionsPanel';
+import AdPlaceholder from './components/AdPlaceholder';
+import {
+  Layout,
+  ImageData,
+  PhotoCount,
+  generateId,
+} from './utils/layouts';
+import { GridOptions, defaultGridOptions } from './utils/gridOptions';
+
+type Step = 'count' | 'layout' | 'editor';
+
+interface CropState {
+  file: File;
+  url: string;
+  targetIndex: number;
+}
 
 export default function Home() {
+  const [step, setStep] = useState<Step>('count');
+  const [photoCount, setPhotoCount] = useState<PhotoCount | null>(4);
+  const [selectedLayout, setSelectedLayout] = useState<Layout | null>(null);
+  const [images, setImages] = useState<(ImageData | null)[]>([]);
+  const [cropState, setCropState] = useState<CropState | null>(null);
+  const [gridOptions, setGridOptions] = useState<GridOptions>(defaultGridOptions);
+
+  const handleCountSelect = useCallback((count: PhotoCount) => {
+    setPhotoCount(count);
+  }, []);
+
+  const handleCountStart = useCallback(() => {
+    if (photoCount) {
+      setStep('layout');
+    }
+  }, [photoCount]);
+
+  const handleLayoutConfirm = useCallback((layout: Layout) => {
+    setSelectedLayout(layout);
+    setImages(Array(layout.totalSlots).fill(null));
+    setStep('editor');
+  }, []);
+
+  const handleLayoutBack = useCallback(() => {
+    setStep('count');
+    setSelectedLayout(null);
+  }, []);
+
+  const handleImageUpload = useCallback((file: File, index: number) => {
+    const url = URL.createObjectURL(file);
+    setCropState({ file, url, targetIndex: index });
+  }, []);
+
+  const handleCropComplete = useCallback(
+    (croppedUrl: string) => {
+      if (!cropState) return;
+
+      const newImage: ImageData = {
+        id: generateId(),
+        originalFile: cropState.file,
+        croppedUrl,
+      };
+
+      setImages((prev) => {
+        const newImages = [...prev];
+        newImages[cropState.targetIndex] = newImage;
+        return newImages;
+      });
+
+      // Clean up
+      URL.revokeObjectURL(cropState.url);
+      setCropState(null);
+    },
+    [cropState]
+  );
+
+  const handleCropCancel = useCallback(() => {
+    if (cropState) {
+      URL.revokeObjectURL(cropState.url);
+      setCropState(null);
+    }
+  }, [cropState]);
+
+  const handleImageRemove = useCallback((index: number) => {
+    setImages((prev) => {
+      const newImages = [...prev];
+      if (newImages[index]) {
+        URL.revokeObjectURL(newImages[index]!.croppedUrl);
+        newImages[index] = null;
+      }
+      return newImages;
+    });
+  }, []);
+
+  const handleImagesChange = useCallback((newImages: (ImageData | null)[]) => {
+    setImages(newImages);
+  }, []);
+
+  const handleReset = useCallback(() => {
+    // Clean up all image URLs
+    images.forEach((img) => {
+      if (img) {
+        URL.revokeObjectURL(img.croppedUrl);
+      }
+    });
+
+    setStep('count');
+    setPhotoCount(null);
+    setSelectedLayout(null);
+    setImages([]);
+    setGridOptions(defaultGridOptions);
+  }, [images]);
+
+  const allSlotsFilled = images.every((img) => img !== null);
+
+  const steps: Step[] = ['count', 'layout', 'editor'];
+  const currentStepIndex = steps.indexOf(step);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="page-layout">
+      {/* Top Ad */}
+      <div className="ad-top">
+        <AdPlaceholder type="banner" />
+      </div>
+
+      {/* Main Content with Sidebars */}
+      <div className="main-with-sidebar flex-1">
+        {/* Left Sidebar Ad (PC only) */}
+        <div className="ad-sidebar-container left">
+          <AdPlaceholder type="sidebar" />
+          <AdPlaceholder type="sidebar" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+        {/* Main Content */}
+        <main className="main-content">
+          {/* Step Indicator */}
+          <div className="step-indicator mb-8">
+            {steps.map((s, i) => (
+              <div
+                key={s}
+                className={`step-dot ${
+                  i === currentStepIndex
+                    ? 'active'
+                    : i < currentStepIndex
+                    ? 'completed'
+                    : ''
+                }`}
+              />
+            ))}
+          </div>
+
+          {/* Step Content */}
+          {step === 'count' && (
+            <PhotoCountSelector
+              selectedCount={photoCount}
+              onSelect={handleCountSelect}
+              onStart={handleCountStart}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          )}
+
+          {step === 'layout' && photoCount && (
+            <LayoutSelector
+              photoCount={photoCount}
+              onConfirm={handleLayoutConfirm}
+              onBack={handleLayoutBack}
+            />
+          )}
+
+          {step === 'editor' && selectedLayout && (
+            <div className="editor-layout">
+              <div className="editor-main">
+                <div className="text-center">
+                  <h1 className="text-3xl font-bold gradient-text mb-2">
+                    Edit Your Grid
+                  </h1>
+                  <p className="text-[var(--text-secondary)]">
+                    Click to add photos, drag to rearrange
+                  </p>
+                </div>
+
+                <PhotoGrid
+                  layout={selectedLayout}
+                  images={images}
+                  options={gridOptions}
+                  onImagesChange={handleImagesChange}
+                  onImageUpload={handleImageUpload}
+                  onImageRemove={handleImageRemove}
+                />
+
+                <div className="flex gap-2 sm:gap-4">
+                  <button className="btn-secondary whitespace-nowrap text-sm sm:text-base px-4 sm:px-8" onClick={handleReset}>
+                    Reset
+                  </button>
+                  <DownloadButton
+                    targetId="photo-grid"
+                    disabled={!allSlotsFilled}
+                  />
+                </div>
+
+                {!allSlotsFilled && (
+                  <p className="text-[var(--text-secondary)] text-sm">
+                    Fill all slots to enable download
+                  </p>
+                )}
+
+                {/* Mobile inline ad */}
+                <div className="lg:hidden w-full">
+                  <AdPlaceholder type="inline" />
+                </div>
+              </div>
+
+              <div className="editor-sidebar">
+                <GridOptionsPanel
+                  options={gridOptions}
+                  onChange={setGridOptions}
+                />
+              </div>
+            </div>
+          )}
+        </main>
+
+        {/* Right Sidebar Ad (PC only) */}
+        <div className="ad-sidebar-container">
+          <AdPlaceholder type="sidebar" />
+          <AdPlaceholder type="sidebar" />
         </div>
-      </main>
+      </div>
+
+      {/* Bottom Ad */}
+      <div className="ad-bottom">
+        <AdPlaceholder type="banner" />
+      </div>
+
+      {/* Crop Modal */}
+      {cropState && (
+        <ImageCropModal
+          imageUrl={cropState.url}
+          onCropComplete={handleCropComplete}
+          onCancel={handleCropCancel}
+        />
+      )}
     </div>
   );
 }
