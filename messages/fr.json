@@ -48,5 +48,34 @@
     "zoom": "Zoom",
     "cancel": "Annuler",
     "confirm": "Confirmer"
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "backToHome": "Retour à l'Accueil",
+    "lastUpdated": "Dernière Mise à Jour",
+    "section1": {
+      "title": "Informations que Nous Collectons",
+      "content": "Grider est un outil d'édition de photos côté client. Tout le traitement des photos se fait localement dans votre navigateur. Nous ne téléchargeons, stockons ni n'avons accès aux photos que vous éditez avec notre service."
+    },
+    "section2": {
+      "title": "Cookies et Publicité",
+      "content": "Nous utilisons Google AdSense pour afficher des publicités. Google peut utiliser des cookies pour diffuser des annonces basées sur vos visites précédentes sur notre site web ou d'autres sites web. Vous pouvez refuser la publicité personnalisée en visitant les Paramètres des Annonces Google."
+    },
+    "section3": {
+      "title": "Analyses",
+      "content": "Nous pouvons utiliser des services d'analyse pour comprendre comment les visiteurs utilisent notre site web. Cela nous aide à améliorer notre service. Les données d'analyse sont collectées de manière anonyme."
+    },
+    "section4": {
+      "title": "Services Tiers",
+      "content": "Notre site web peut contenir des liens vers des sites web ou services tiers. Nous ne sommes pas responsables des pratiques de confidentialité de ces sites externes."
+    },
+    "section5": {
+      "title": "Sécurité des Données",
+      "content": "Étant donné que tout le traitement des photos se fait localement dans votre navigateur, vos images ne quittent jamais votre appareil. Nous mettons en œuvre des mesures de sécurité appropriées pour protéger toutes les données que nous collectons."
+    },
+    "section6": {
+      "title": "Nous Contacter",
+      "content": "Si vous avez des questions concernant cette Politique de Confidentialité, veuillez nous contacter via notre site web."
+    }
   }
 }

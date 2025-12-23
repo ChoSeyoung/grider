@@ -48,5 +48,34 @@
     "zoom": "Zoom",
     "cancel": "Cancel",
     "confirm": "Confirm"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "backToHome": "Back to Home",
+    "lastUpdated": "Last Updated",
+    "section1": {
+      "title": "Information We Collect",
+      "content": "Grider is a client-side photo editing tool. All photo processing happens locally in your browser. We do not upload, store, or have access to any photos you edit using our service."
+    },
+    "section2": {
+      "title": "Cookies and Advertising",
+      "content": "We use Google AdSense to display advertisements. Google may use cookies to serve ads based on your prior visits to our website or other websites. You can opt out of personalized advertising by visiting Google's Ads Settings."
+    },
+    "section3": {
+      "title": "Analytics",
+      "content": "We may use analytics services to understand how visitors use our website. This helps us improve our service. Analytics data is collected anonymously."
+    },
+    "section4": {
+      "title": "Third-Party Services",
+      "content": "Our website may contain links to third-party websites or services. We are not responsible for the privacy practices of these external sites."
+    },
+    "section5": {
+      "title": "Data Security",
+      "content": "Since all photo processing occurs locally in your browser, your images never leave your device. We implement appropriate security measures to protect any data we do collect."
+    },
+    "section6": {
+      "title": "Contact Us",
+      "content": "If you have any questions about this Privacy Policy, please contact us through our website."
+    }
   }
 }
