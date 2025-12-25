@@ -556,6 +556,7 @@ body {
   .ad-sidebar-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 16px;
     width: 300px;
     flex-shrink: 0;
