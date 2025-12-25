@@ -1,81 +1,81 @@
 {
   "metadata": {
-    "title": "Grider - Free Photo Grid Maker | Create Beautiful Layouts",
-    "description": "Create stunning photo grid layouts for free. Choose from multiple layouts, customize gaps, corners, and backgrounds. Download as PNG instantly. No signup required."
+    "title": "Grider - Free Photo Grid Maker | Create Stunning Layouts",
+    "description": "Make beautiful photo grids in seconds. Pick a layout, customize spacing and corners, download as PNG. No signup needed!"
   },
   "home": {
     "title": "Grider",
-    "subtitle": "Create beautiful photo layouts",
+    "subtitle": "Make your photos look amazing",
     "howManyPhotos": "How many photos?",
-    "start": "Start"
+    "start": "Let's go"
   },
   "layout": {
-    "title": "Choose Layout",
-    "photosPerRow": "How many photos per row?",
+    "title": "Pick a layout",
+    "photosPerRow": "Photos per row?",
     "columns": "columns",
     "rows": "rows",
     "back": "Back",
-    "continue": "Continue"
+    "continue": "Next"
   },
   "editor": {
-    "title": "Edit Your Grid",
-    "subtitle": "Click to add photos, drag to rearrange",
-    "reset": "Reset",
-    "download": "Download",
+    "title": "Design your grid",
+    "subtitle": "Tap to add photos, drag to rearrange",
+    "reset": "Start over",
+    "download": "Save",
     "saving": "Saving...",
-    "fillAllSlots": "Fill all slots to enable download"
+    "fillAllSlots": "Add photos to all slots first"
   },
   "options": {
-    "title": "Options",
-    "imageGap": "Image Gap",
-    "cornerStyle": "Corner Style",
-    "backgroundColor": "Background Color",
+    "title": "Style",
+    "imageGap": "Spacing",
+    "cornerStyle": "Corners",
+    "backgroundColor": "Background",
     "gap": {
       "none": "None",
-      "small": "Small",
-      "medium": "Medium",
-      "large": "Large"
+      "small": "Tight",
+      "medium": "Normal",
+      "large": "Wide"
     },
     "corner": {
-      "square": "Square",
-      "slight": "Slight",
-      "rounded": "Rounded",
+      "square": "Sharp",
+      "slight": "Soft",
+      "rounded": "Round",
       "circle": "Circle"
     }
   },
   "crop": {
-    "title": "Crop Image",
+    "title": "Crop photo",
     "zoom": "Zoom",
     "cancel": "Cancel",
-    "confirm": "Confirm"
+    "confirm": "Done"
   },
   "privacy": {
     "title": "Privacy Policy",
-    "backToHome": "Back to Home",
-    "lastUpdated": "Last Updated",
+    "backToHome": "Back home",
+    "lastUpdated": "Last updated",
     "section1": {
-      "title": "Information We Collect",
-      "content": "Grider is a client-side photo editing tool. All photo processing happens locally in your browser. We do not upload, store, or have access to any photos you edit using our service."
+      "title": "What we collect",
+      "content": "Grider works entirely in your browser. All photo editing happens on your device - we never upload, store, or access your photos. Your images stay with you."
     },
     "section2": {
-      "title": "Cookies and Advertising",
-      "content": "We use Google AdSense to display advertisements. Google may use cookies to serve ads based on your prior visits to our website or other websites. You can opt out of personalized advertising by visiting Google's Ads Settings."
+      "title": "Cookies & Ads",
+      "content": "We show ads through Google AdSense. Google might use cookies to personalize ads based on your browsing. You can turn this off in Google's ad settings."
     },
     "section3": {
       "title": "Analytics",
-      "content": "We may use analytics services to understand how visitors use our website. This helps us improve our service. Analytics data is collected anonymously."
+      "content": "We may use analytics to see how people use our site. This helps us make things better. All data is anonymous."
     },
     "section4": {
-      "title": "Third-Party Services",
-      "content": "Our website may contain links to third-party websites or services. We are not responsible for the privacy practices of these external sites."
+      "title": "External links",
+      "content": "We might link to other sites. We're not responsible for their privacy practices."
     },
     "section5": {
-      "title": "Data Security",
-      "content": "Since all photo processing occurs locally in your browser, your images never leave your device. We implement appropriate security measures to protect any data we do collect."
+      "title": "Security",
+      "content": "Since everything runs locally in your browser, your photos never leave your device. We take security seriously for any data we do handle."
     },
     "section6": {
-      "title": "Contact Us",
-      "content": "If you have any questions about this Privacy Policy, please contact us through our website."
+      "title": "Questions?",
+      "content": "Got questions about this policy? Reach out through our site."
     }
   }
 }

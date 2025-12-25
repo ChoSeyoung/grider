@@ -1,81 +1,81 @@
 {
   "metadata": {
-    "title": "Grider - Kostenloser Fotoraster-Ersteller | Erstelle Schöne Layouts",
-    "description": "Erstelle kostenlos beeindruckende Fotoraster-Layouts. Wähle aus mehreren Layouts, passe Abstände, Ecken und Hintergründe an. Sofort als PNG herunterladen. Keine Anmeldung erforderlich."
+    "title": "Grider - Kostenloser Fotoraster-Maker | Coole Layouts erstellen",
+    "description": "Erstelle tolle Foto-Raster kostenlos. Wähle dein Layout, passe Abstände und Ecken an, lade als PNG herunter. Ohne Anmeldung!"
   },
   "home": {
     "title": "Grider",
-    "subtitle": "Erstelle schöne Foto-Layouts",
+    "subtitle": "Bring deine Fotos zur Geltung",
     "howManyPhotos": "Wie viele Fotos?",
-    "start": "Starten"
+    "start": "Los geht's!"
   },
   "layout": {
-    "title": "Layout Wählen",
-    "photosPerRow": "Wie viele Fotos pro Reihe?",
+    "title": "Layout wählen",
+    "photosPerRow": "Fotos pro Reihe?",
     "columns": "Spalten",
-    "rows": "Zeilen",
+    "rows": "Reihen",
     "back": "Zurück",
     "continue": "Weiter"
   },
   "editor": {
-    "title": "Raster Bearbeiten",
-    "subtitle": "Klicken zum Hinzufügen, Ziehen zum Neuanordnen",
-    "reset": "Zurücksetzen",
-    "download": "Herunterladen",
+    "title": "Gestalte dein Raster",
+    "subtitle": "Tippen zum Hinzufügen, Ziehen zum Ordnen",
+    "reset": "Neu starten",
+    "download": "Speichern",
     "saving": "Speichern...",
-    "fillAllSlots": "Fülle alle Plätze zum Herunterladen"
+    "fillAllSlots": "Erst alle Felder füllen"
   },
   "options": {
-    "title": "Optionen",
-    "imageGap": "Bildabstand",
-    "cornerStyle": "Eckenstil",
-    "backgroundColor": "Hintergrundfarbe",
+    "title": "Style",
+    "imageGap": "Abstand",
+    "cornerStyle": "Ecken",
+    "backgroundColor": "Hintergrund",
     "gap": {
       "none": "Kein",
-      "small": "Klein",
-      "medium": "Mittel",
-      "large": "Groß"
+      "small": "Eng",
+      "medium": "Normal",
+      "large": "Weit"
     },
     "corner": {
       "square": "Eckig",
       "slight": "Leicht",
-      "rounded": "Gerundet",
+      "rounded": "Rund",
       "circle": "Kreis"
     }
   },
   "crop": {
-    "title": "Bild Zuschneiden",
+    "title": "Foto zuschneiden",
     "zoom": "Zoom",
     "cancel": "Abbrechen",
-    "confirm": "Bestätigen"
+    "confirm": "Fertig"
   },
   "privacy": {
-    "title": "Datenschutzrichtlinie",
-    "backToHome": "Zurück zur Startseite",
-    "lastUpdated": "Zuletzt Aktualisiert",
+    "title": "Datenschutzerklärung",
+    "backToHome": "Zur Startseite",
+    "lastUpdated": "Letzte Aktualisierung",
     "section1": {
-      "title": "Informationen, die Wir Sammeln",
-      "content": "Grider ist ein clientseitiges Fotobearbeitungstool. Die gesamte Fotoverarbeitung erfolgt lokal in Ihrem Browser. Wir laden keine Fotos hoch, speichern sie nicht und haben keinen Zugriff auf Fotos, die Sie mit unserem Service bearbeiten."
+      "title": "Was sammeln wir?",
+      "content": "Grider läuft komplett in deinem Browser. Die gesamte Bildbearbeitung passiert auf deinem Gerät - wir laden, speichern oder greifen nie auf deine Fotos zu. Deine Bilder bleiben bei dir."
     },
     "section2": {
-      "title": "Cookies und Werbung",
-      "content": "Wir verwenden Google AdSense zur Anzeige von Werbung. Google kann Cookies verwenden, um Anzeigen basierend auf Ihren früheren Besuchen auf unserer Website oder anderen Websites zu schalten. Sie können personalisierte Werbung in den Google-Anzeigeneinstellungen deaktivieren."
+      "title": "Cookies & Werbung",
+      "content": "Wir zeigen Werbung über Google AdSense. Google kann Cookies nutzen, um Werbung basierend auf deinem Surfverhalten anzupassen. Du kannst das in den Google-Werbeeinstellungen abschalten."
     },
     "section3": {
-      "title": "Analysen",
-      "content": "Wir können Analysedienste verwenden, um zu verstehen, wie Besucher unsere Website nutzen. Dies hilft uns, unseren Service zu verbessern. Analysedaten werden anonym erfasst."
+      "title": "Analyse",
+      "content": "Wir nutzen vielleicht Analyse-Tools, um zu sehen, wie Leute unsere Seite nutzen. Das hilft uns, besser zu werden. Alle Daten sind anonym."
     },
     "section4": {
-      "title": "Drittanbieterdienste",
-      "content": "Unsere Website kann Links zu Websites oder Diensten Dritter enthalten. Wir sind nicht verantwortlich für die Datenschutzpraktiken dieser externen Websites."
+      "title": "Externe Links",
+      "content": "Wir verlinken möglicherweise auf andere Seiten. Für deren Datenschutz sind wir nicht verantwortlich."
     },
     "section5": {
-      "title": "Datensicherheit",
-      "content": "Da die gesamte Fotoverarbeitung lokal in Ihrem Browser erfolgt, verlassen Ihre Bilder niemals Ihr Gerät. Wir implementieren angemessene Sicherheitsmaßnahmen zum Schutz aller von uns erfassten Daten."
+      "title": "Sicherheit",
+      "content": "Da alles lokal in deinem Browser läuft, verlassen deine Fotos nie dein Gerät. Sicherheit nehmen wir ernst."
     },
     "section6": {
-      "title": "Kontaktieren Sie Uns",
-      "content": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte über unsere Website."
+      "title": "Fragen?",
+      "content": "Hast du Fragen zu dieser Richtlinie? Kontaktiere uns über unsere Seite."
     }
   }
 }

@@ -1,81 +1,81 @@
 {
   "metadata": {
-    "title": "Grider - Créateur de Grilles Photo Gratuit | Créez de Beaux Designs",
-    "description": "Créez de superbes grilles photo gratuitement. Choisissez parmi plusieurs mises en page, personnalisez les espaces, coins et arrière-plans. Téléchargez en PNG instantanément. Sans inscription."
+    "title": "Grider - Créateur de Grilles Photo Gratuit | Designs Magnifiques",
+    "description": "Crée des grilles photo superbes gratuitement. Choisis ton design, personnalise les espaces et les coins, télécharge en PNG. Sans inscription !"
   },
   "home": {
     "title": "Grider",
-    "subtitle": "Créez de belles mises en page photo",
+    "subtitle": "Mets tes photos en valeur",
     "howManyPhotos": "Combien de photos ?",
-    "start": "Commencer"
+    "start": "C'est parti !"
   },
   "layout": {
-    "title": "Choisir la Mise en Page",
-    "photosPerRow": "Combien de photos par ligne ?",
+    "title": "Choisis un design",
+    "photosPerRow": "Photos par ligne ?",
     "columns": "colonnes",
     "rows": "lignes",
     "back": "Retour",
-    "continue": "Continuer"
+    "continue": "Suivant"
   },
   "editor": {
-    "title": "Éditez Votre Grille",
-    "subtitle": "Cliquez pour ajouter des photos, glissez pour réorganiser",
-    "reset": "Réinitialiser",
-    "download": "Télécharger",
-    "saving": "Enregistrement...",
-    "fillAllSlots": "Remplissez tous les emplacements pour télécharger"
+    "title": "Crée ta grille",
+    "subtitle": "Touche pour ajouter, glisse pour réorganiser",
+    "reset": "Recommencer",
+    "download": "Sauvegarder",
+    "saving": "Sauvegarde...",
+    "fillAllSlots": "Remplis toutes les cases d'abord"
   },
   "options": {
-    "title": "Options",
-    "imageGap": "Espacement des Images",
-    "cornerStyle": "Style des Coins",
-    "backgroundColor": "Couleur de Fond",
+    "title": "Style",
+    "imageGap": "Espacement",
+    "cornerStyle": "Coins",
+    "backgroundColor": "Fond",
     "gap": {
       "none": "Aucun",
-      "small": "Petit",
-      "medium": "Moyen",
-      "large": "Grand"
+      "small": "Serré",
+      "medium": "Normal",
+      "large": "Large"
     },
     "corner": {
       "square": "Carré",
       "slight": "Léger",
       "rounded": "Arrondi",
-      "circle": "Cercle"
+      "circle": "Rond"
     }
   },
   "crop": {
-    "title": "Recadrer l'Image",
+    "title": "Recadrer la photo",
     "zoom": "Zoom",
     "cancel": "Annuler",
-    "confirm": "Confirmer"
+    "confirm": "OK"
   },
   "privacy": {
     "title": "Politique de Confidentialité",
-    "backToHome": "Retour à l'Accueil",
-    "lastUpdated": "Dernière Mise à Jour",
+    "backToHome": "Retour à l'accueil",
+    "lastUpdated": "Dernière mise à jour",
     "section1": {
-      "title": "Informations que Nous Collectons",
-      "content": "Grider est un outil d'édition de photos côté client. Tout le traitement des photos se fait localement dans votre navigateur. Nous ne téléchargeons, stockons ni n'avons accès aux photos que vous éditez avec notre service."
+      "title": "Quelles infos on collecte ?",
+      "content": "Grider fonctionne entièrement dans ton navigateur. Tout le traitement photo se fait sur ton appareil - on ne télécharge, stocke ou accède jamais à tes photos. Tes images restent chez toi."
     },
     "section2": {
-      "title": "Cookies et Publicité",
-      "content": "Nous utilisons Google AdSense pour afficher des publicités. Google peut utiliser des cookies pour diffuser des annonces basées sur vos visites précédentes sur notre site web ou d'autres sites web. Vous pouvez refuser la publicité personnalisée en visitant les Paramètres des Annonces Google."
+      "title": "Cookies et Pubs",
+      "content": "On affiche des pubs via Google AdSense. Google peut utiliser des cookies pour personnaliser les pubs selon ta navigation. Tu peux désactiver ça dans les paramètres de pub Google."
     },
     "section3": {
-      "title": "Analyses",
-      "content": "Nous pouvons utiliser des services d'analyse pour comprendre comment les visiteurs utilisent notre site web. Cela nous aide à améliorer notre service. Les données d'analyse sont collectées de manière anonyme."
+      "title": "Statistiques",
+      "content": "On peut utiliser des outils d'analyse pour voir comment les gens utilisent notre site. Ça nous aide à nous améliorer. Toutes les données sont anonymes."
     },
     "section4": {
-      "title": "Services Tiers",
-      "content": "Notre site web peut contenir des liens vers des sites web ou services tiers. Nous ne sommes pas responsables des pratiques de confidentialité de ces sites externes."
+      "title": "Liens externes",
+      "content": "On peut avoir des liens vers d'autres sites. On n'est pas responsable de leurs pratiques de confidentialité."
     },
     "section5": {
-      "title": "Sécurité des Données",
-      "content": "Étant donné que tout le traitement des photos se fait localement dans votre navigateur, vos images ne quittent jamais votre appareil. Nous mettons en œuvre des mesures de sécurité appropriées pour protéger toutes les données que nous collectons."
+      "title": "Sécurité",
+      "content": "Comme tout se passe dans ton navigateur, tes photos ne quittent jamais ton appareil. On prend la sécurité au sérieux."
     },
     "section6": {
-      "title": "Nous Contacter",
-      "content": "Si vous avez des questions concernant cette Politique de Confidentialité, veuillez nous contacter via notre site web."
+      "title": "Des questions ?",
+      "content": "Tu as des questions sur cette politique ? Contacte-nous via notre site."
     }
   }
 }

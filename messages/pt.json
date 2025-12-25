@@ -1,81 +1,81 @@
 {
   "metadata": {
-    "title": "Grider - Criador de Grade de Fotos Grátis | Crie Layouts Bonitos",
-    "description": "Crie grades de fotos impressionantes gratuitamente. Escolha entre vários layouts, personalize espaços, cantos e fundos. Baixe como PNG instantaneamente. Sem cadastro."
+    "title": "Grider - Criador de Grade de Fotos Grátis | Layouts Incríveis",
+    "description": "Crie grades de fotos lindas de graça. Escolha seu layout, ajuste espaços e cantos, baixe em PNG. Sem cadastro!"
   },
   "home": {
     "title": "Grider",
-    "subtitle": "Crie layouts de fotos bonitos",
+    "subtitle": "Deixe suas fotos ainda mais bonitas",
     "howManyPhotos": "Quantas fotos?",
-    "start": "Começar"
+    "start": "Bora!"
   },
   "layout": {
-    "title": "Escolher Layout",
-    "photosPerRow": "Quantas fotos por linha?",
+    "title": "Escolha um layout",
+    "photosPerRow": "Fotos por linha?",
     "columns": "colunas",
     "rows": "linhas",
     "back": "Voltar",
-    "continue": "Continuar"
+    "continue": "Próximo"
   },
   "editor": {
-    "title": "Edite Sua Grade",
-    "subtitle": "Clique para adicionar fotos, arraste para reorganizar",
-    "reset": "Reiniciar",
-    "download": "Baixar",
+    "title": "Monte sua grade",
+    "subtitle": "Toque pra adicionar, arraste pra organizar",
+    "reset": "Recomeçar",
+    "download": "Salvar",
     "saving": "Salvando...",
-    "fillAllSlots": "Preencha todos os espaços para baixar"
+    "fillAllSlots": "Preencha todos os espaços primeiro"
   },
   "options": {
-    "title": "Opções",
-    "imageGap": "Espaço entre Imagens",
-    "cornerStyle": "Estilo dos Cantos",
-    "backgroundColor": "Cor de Fundo",
+    "title": "Estilo",
+    "imageGap": "Espaçamento",
+    "cornerStyle": "Cantos",
+    "backgroundColor": "Fundo",
     "gap": {
       "none": "Nenhum",
-      "small": "Pequeno",
+      "small": "Pouco",
       "medium": "Médio",
       "large": "Grande"
     },
     "corner": {
-      "square": "Quadrado",
-      "slight": "Leve",
+      "square": "Reto",
+      "slight": "Suave",
       "rounded": "Arredondado",
-      "circle": "Círculo"
+      "circle": "Circular"
     }
   },
   "crop": {
-    "title": "Cortar Imagem",
+    "title": "Cortar foto",
     "zoom": "Zoom",
     "cancel": "Cancelar",
-    "confirm": "Confirmar"
+    "confirm": "Pronto"
   },
   "privacy": {
     "title": "Política de Privacidade",
-    "backToHome": "Voltar ao Início",
-    "lastUpdated": "Última Atualização",
+    "backToHome": "Voltar pro início",
+    "lastUpdated": "Última atualização",
     "section1": {
-      "title": "Informações que Coletamos",
-      "content": "Grider é uma ferramenta de edição de fotos do lado do cliente. Todo o processamento de fotos acontece localmente no seu navegador. Não fazemos upload, armazenamos ou temos acesso a nenhuma foto que você edita usando nosso serviço."
+      "title": "O que a gente coleta?",
+      "content": "O Grider funciona totalmente no seu navegador. Todo o processamento de fotos acontece no seu dispositivo - a gente nunca faz upload, guarda ou acessa suas fotos. Suas imagens ficam com você."
     },
     "section2": {
-      "title": "Cookies e Publicidade",
-      "content": "Usamos o Google AdSense para exibir anúncios. O Google pode usar cookies para exibir anúncios com base em suas visitas anteriores ao nosso site ou a outros sites. Você pode optar por não receber publicidade personalizada visitando as Configurações de Anúncios do Google."
+      "title": "Cookies e Anúncios",
+      "content": "A gente mostra anúncios pelo Google AdSense. O Google pode usar cookies pra personalizar anúncios com base na sua navegação. Você pode desativar isso nas configurações de anúncios do Google."
     },
     "section3": {
-      "title": "Análises",
-      "content": "Podemos usar serviços de análise para entender como os visitantes usam nosso site. Isso nos ajuda a melhorar nosso serviço. Os dados de análise são coletados anonimamente."
+      "title": "Analytics",
+      "content": "A gente pode usar ferramentas de análise pra ver como as pessoas usam nosso site. Isso ajuda a melhorar. Todos os dados são anônimos."
     },
     "section4": {
-      "title": "Serviços de Terceiros",
-      "content": "Nosso site pode conter links para sites ou serviços de terceiros. Não somos responsáveis pelas práticas de privacidade desses sites externos."
+      "title": "Links externos",
+      "content": "A gente pode ter links pra outros sites. Não somos responsáveis pelas práticas de privacidade deles."
     },
     "section5": {
-      "title": "Segurança de Dados",
-      "content": "Como todo o processamento de fotos ocorre localmente no seu navegador, suas imagens nunca saem do seu dispositivo. Implementamos medidas de segurança apropriadas para proteger quaisquer dados que coletamos."
+      "title": "Segurança",
+      "content": "Como tudo roda no seu navegador, suas fotos nunca saem do seu dispositivo. A gente leva segurança a sério."
     },
     "section6": {
-      "title": "Entre em Contato",
-      "content": "Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco através do nosso site."
+      "title": "Dúvidas?",
+      "content": "Tem perguntas sobre essa política? Entre em contato pelo nosso site."
     }
   }
 }

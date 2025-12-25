@@ -1,40 +1,40 @@
 {
   "metadata": {
-    "title": "Grider - 免费照片网格制作器 | 创建精美布局",
-    "description": "免费创建精美的照片网格布局。选择多种布局，自定义间距、圆角和背景。即时下载PNG。无需注册。"
+    "title": "Grider - 免费照片网格工具 | 轻松做出好看的拼图",
+    "description": "免费制作照片网格拼图。多种布局任你选，间距、圆角、背景随心调。一键下载PNG，无需注册！"
   },
   "home": {
     "title": "Grider",
-    "subtitle": "创建精美的照片布局",
-    "howManyPhotos": "使用多少张照片？",
-    "start": "开始"
+    "subtitle": "让你的照片排得漂漂亮亮",
+    "howManyPhotos": "要用几张照片？",
+    "start": "开始吧"
   },
   "layout": {
-    "title": "选择布局",
-    "photosPerRow": "每行多少张？",
+    "title": "选个布局",
+    "photosPerRow": "每行放几张？",
     "columns": "列",
     "rows": "行",
     "back": "返回",
-    "continue": "继续"
+    "continue": "下一步"
   },
   "editor": {
-    "title": "编辑网格",
-    "subtitle": "点击添加照片，拖动重新排列",
-    "reset": "重置",
-    "download": "下载",
+    "title": "设计你的网格",
+    "subtitle": "点击添加照片，拖动调整顺序",
+    "reset": "重新开始",
+    "download": "保存",
     "saving": "保存中...",
-    "fillAllSlots": "填满所有格子后即可下载"
+    "fillAllSlots": "先把所有格子填满哦"
   },
   "options": {
-    "title": "选项",
-    "imageGap": "图片间距",
-    "cornerStyle": "圆角样式",
-    "backgroundColor": "背景颜色",
+    "title": "样式",
+    "imageGap": "照片间距",
+    "cornerStyle": "边角",
+    "backgroundColor": "背景色",
     "gap": {
       "none": "无",
-      "small": "小",
-      "medium": "中",
-      "large": "大"
+      "small": "窄",
+      "medium": "适中",
+      "large": "宽"
     },
     "corner": {
       "square": "直角",
@@ -44,38 +44,38 @@
     }
   },
   "crop": {
-    "title": "裁剪图片",
+    "title": "裁剪照片",
     "zoom": "缩放",
     "cancel": "取消",
-    "confirm": "确认"
+    "confirm": "确定"
   },
   "privacy": {
     "title": "隐私政策",
     "backToHome": "返回首页",
     "lastUpdated": "最后更新",
     "section1": {
-      "title": "我们收集的信息",
-      "content": "Grider是一款客户端照片编辑工具。所有照片处理都在您的浏览器中本地进行。我们不会上传、存储或访问您使用我们服务编辑的任何照片。"
+      "title": "我们收集什么信息？",
+      "content": "Grider完全在你的浏览器里运行。所有照片处理都在你自己的设备上完成，我们不会上传、存储或查看你的任何照片。"
     },
     "section2": {
       "title": "Cookie和广告",
-      "content": "我们使用Google AdSense展示广告。Google可能会使用Cookie根据您之前访问我们网站或其他网站的记录来投放广告。您可以在Google广告设置中选择退出个性化广告。"
+      "content": "我们用Google AdSense展示广告。Google可能会根据你的浏览记录推送个性化广告，不想看的话可以在Google广告设置里关掉。"
     },
     "section3": {
-      "title": "分析",
-      "content": "我们可能会使用分析服务来了解访问者如何使用我们的网站。这有助于我们改进服务。分析数据以匿名方式收集。"
+      "title": "数据分析",
+      "content": "我们可能会匿名统计网站访问情况来改进服务，不会收集任何能识别你身份的信息。"
     },
     "section4": {
-      "title": "第三方服务",
-      "content": "我们的网站可能包含指向第三方网站或服务的链接。我们对这些外部网站的隐私做法不承担责任。"
+      "title": "外部链接",
+      "content": "网站上可能有外部链接，那些网站的隐私政策跟我们无关哦。"
     },
     "section5": {
-      "title": "数据安全",
-      "content": "由于所有照片处理都在您的浏览器中本地进行，您的图片不会离开您的设备。我们采取适当的安全措施来保护我们收集的任何数据。"
+      "title": "安全保护",
+      "content": "因为所有操作都在你的浏览器里完成，你的照片根本不会离开你的设备。我们会妥善保护收集到的任何数据。"
     },
     "section6": {
-      "title": "联系我们",
-      "content": "如果您对本隐私政策有任何问题，请通过我们的网站与我们联系。"
+      "title": "有问题？",
+      "content": "对这个隐私政策有疑问的话，欢迎通过网站联系我们。"
     }
   }
 }
