@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useId } from 'react';
+import { useEffect, useRef, useId, useState } from 'react';
 
 // Ad slot IDs for different placements
 export const AD_SLOTS = {
@@ -25,21 +25,39 @@ declare global {
   }
 }
 
+// Fixed ad sizes matching AdSense ad units
+const AD_SIZES = {
+  banner: { width: '728px', height: '90px', maxWidth: '100%' },
+  sidebar: { width: '300px', height: '250px' },
+  inline: { width: '320px', height: '100px', maxWidth: '100%' },
+} as const;
+
 export default function AdPlaceholder({ type, slot, className = '' }: AdPlaceholderProps) {
   const adRef = useRef<HTMLModElement>(null);
   const isAdLoaded = useRef(false);
   const uniqueId = useId();
+  const [adFailed, setAdFailed] = useState(false);
 
-  const sizeClasses = {
-    banner: 'w-full min-h-[90px]',
-    sidebar: 'w-[300px] min-h-[250px]',
-    inline: 'w-full min-h-[100px]',
+  const size = AD_SIZES[type];
+
+  const containerStyle: React.CSSProperties = {
+    width: size.width,
+    height: size.height,
+    maxWidth: 'maxWidth' in size ? size.maxWidth : undefined,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255, 255, 255, 0.03)',
+    border: '1px dashed rgba(255, 255, 255, 0.1)',
+    borderRadius: '8px',
+    margin: '0 auto',
   };
 
-  const adStyles = {
-    banner: { display: 'block' },
-    sidebar: { display: 'inline-block', width: '300px', height: '250px' },
-    inline: { display: 'block' },
+  const insStyle: React.CSSProperties = {
+    display: 'block',
+    width: size.width,
+    height: size.height,
+    maxWidth: 'maxWidth' in size ? size.maxWidth : undefined,
   };
 
   useEffect(() => {
@@ -50,6 +68,7 @@ export default function AdPlaceholder({ type, slot, className = '' }: AdPlacehol
           isAdLoaded.current = true;
         } catch (error) {
           console.error('AdSense error:', error);
+          setAdFailed(true);
         }
       }
     }, 100);
@@ -59,20 +78,25 @@ export default function AdPlaceholder({ type, slot, className = '' }: AdPlacehol
 
   return (
     <div
-      className={`ad-container ${sizeClasses[type]} ${className}`}
+      className={`ad-container ${className}`}
+      style={containerStyle}
       role="complementary"
       aria-label="Advertisement"
     >
-      <ins
-        key={uniqueId}
-        ref={adRef}
-        className="adsbygoogle"
-        style={adStyles[type]}
-        data-ad-client="ca-pub-4595496614643694"
-        data-ad-slot={AD_SLOTS[slot]}
-        data-ad-format={type === 'sidebar' ? 'rectangle' : 'auto'}
-        data-full-width-responsive={type !== 'sidebar' ? 'true' : 'false'}
-      />
+      {adFailed ? (
+        <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px' }}>AD</span>
+      ) : (
+        <ins
+          key={uniqueId}
+          ref={adRef}
+          className="adsbygoogle"
+          style={insStyle}
+          data-ad-client="ca-pub-4595496614643694"
+          data-ad-slot={AD_SLOTS[slot]}
+          data-ad-format={type === 'sidebar' ? 'rectangle' : 'horizontal'}
+          data-full-width-responsive={type !== 'sidebar' ? 'true' : 'false'}
+        />
+      )}
     </div>
   );
 }
