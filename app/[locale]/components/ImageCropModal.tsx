@@ -51,11 +51,11 @@ export default function ImageCropModal({
   return (
     <div className="modal-overlay" onClick={onCancel}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <h2 className="text-2xl font-bold gradient-text mb-6 text-center">
+        <h2 className="text-xl font-bold gradient-text mb-4 text-center flex-shrink-0">
           {t('title')}
         </h2>
 
-        <div className="crop-container mb-6">
+        <div className="crop-container">
           <Cropper
             image={imageUrl}
             crop={crop}
@@ -67,7 +67,7 @@ export default function ImageCropModal({
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mt-4 flex-shrink-0">
           <label className="block text-sm text-[var(--text-secondary)] mb-2">
             {t('zoom')}
           </label>
@@ -82,7 +82,7 @@ export default function ImageCropModal({
           />
         </div>
 
-        <div className="flex gap-4 justify-center">
+        <div className="flex gap-4 justify-center mt-4 flex-shrink-0">
           <button className="btn-secondary" onClick={onCancel}>
             {t('cancel')}
           </button>
