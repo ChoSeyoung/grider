@@ -38,10 +38,17 @@
     },
     "corner": {
       "square": "Sharp",
-      "slight": "Soft",
       "rounded": "Round",
-      "circle": "Circle"
-    }
+      "slight": "Soft",
+      "circle": "Full"
+    },
+    "color": {
+      "transparent": "None",
+      "white": "White",
+      "black": "Black",
+      "rainbow": "More colors"
+    },
+    "apply": "Apply"
   },
   "crop": {
     "title": "Crop photo",

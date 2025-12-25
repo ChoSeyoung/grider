@@ -38,10 +38,17 @@
     },
     "corner": {
       "square": "カクカク",
-      "slight": "ちょっと丸",
       "rounded": "まるっと",
+      "slight": "ちょっと丸",
       "circle": "まんまる"
-    }
+    },
+    "color": {
+      "transparent": "なし",
+      "white": "白",
+      "black": "黒",
+      "rainbow": "もっと色を見る"
+    },
+    "apply": "適用"
   },
   "crop": {
     "title": "写真を切り抜く",

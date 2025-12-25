@@ -38,10 +38,17 @@
     },
     "corner": {
       "square": "Recto",
-      "slight": "Suave",
       "rounded": "Redondo",
-      "circle": "Circular"
-    }
+      "slight": "Suave",
+      "circle": "Muy redondo"
+    },
+    "color": {
+      "transparent": "Sin fondo",
+      "white": "Blanco",
+      "black": "Negro",
+      "rainbow": "Más colores"
+    },
+    "apply": "Aplicar"
   },
   "crop": {
     "title": "Recortar foto",

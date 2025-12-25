@@ -38,10 +38,17 @@
     },
     "corner": {
       "square": "直角",
-      "slight": "微圆",
       "rounded": "圆角",
-      "circle": "圆形"
-    }
+      "slight": "微圆",
+      "circle": "很圆"
+    },
+    "color": {
+      "transparent": "无",
+      "white": "白色",
+      "black": "黑色",
+      "rainbow": "更多颜色"
+    },
+    "apply": "应用"
   },
   "crop": {
     "title": "裁剪照片",

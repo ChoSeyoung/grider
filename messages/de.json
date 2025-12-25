@@ -38,10 +38,17 @@
     },
     "corner": {
       "square": "Eckig",
-      "slight": "Leicht",
       "rounded": "Rund",
-      "circle": "Kreis"
-    }
+      "slight": "Leicht",
+      "circle": "Voll"
+    },
+    "color": {
+      "transparent": "Keine",
+      "white": "Weiß",
+      "black": "Schwarz",
+      "rainbow": "Mehr Farben"
+    },
+    "apply": "Anwenden"
   },
   "crop": {
     "title": "Foto zuschneiden",

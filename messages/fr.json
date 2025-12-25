@@ -38,10 +38,17 @@
     },
     "corner": {
       "square": "Carré",
-      "slight": "Léger",
       "rounded": "Arrondi",
-      "circle": "Rond"
-    }
+      "slight": "Léger",
+      "circle": "Très arrondi"
+    },
+    "color": {
+      "transparent": "Aucun",
+      "white": "Blanc",
+      "black": "Noir",
+      "rainbow": "Plus de couleurs"
+    },
+    "apply": "Appliquer"
   },
   "crop": {
     "title": "Recadrer la photo",
