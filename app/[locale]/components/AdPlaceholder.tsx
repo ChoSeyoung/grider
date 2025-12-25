@@ -28,7 +28,7 @@ declare global {
 // Fixed ad sizes matching AdSense ad units
 const AD_SIZES = {
   banner: { width: '100%', height: '90px', maxWidth: '728px' },
-  sidebar: { width: '300px', height: '250px' },
+  sidebar: { width: '300px', height: '600px' },
   inline: { width: '100%', height: '100px', maxWidth: '320px' },
 } as const;
 
@@ -93,7 +93,7 @@ export default function AdPlaceholder({ type, slot, className = '' }: AdPlacehol
           style={insStyle}
           data-ad-client="ca-pub-4595496614643694"
           data-ad-slot={AD_SLOTS[slot]}
-          data-ad-format={type === 'sidebar' ? 'rectangle' : 'horizontal'}
+          data-ad-format={type === 'sidebar' ? 'vertical' : 'horizontal'}
           data-full-width-responsive={type !== 'sidebar' ? 'true' : 'false'}
         />
       )}
