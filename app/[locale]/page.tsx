@@ -129,15 +129,14 @@ export default function Home() {
     <div className="page-layout">
       {/* Top Ad */}
       <div className="ad-top">
-        <AdPlaceholder type="banner" />
+        <AdPlaceholder type="banner" slot="topBanner" />
       </div>
 
       {/* Main Content with Sidebars */}
       <div className="main-with-sidebar flex-1">
         {/* Left Sidebar Ad (PC only) */}
         <div className="ad-sidebar-container left">
-          <AdPlaceholder type="sidebar" />
-          <AdPlaceholder type="sidebar" />
+          <AdPlaceholder type="sidebar" slot="sidebarLeft" />
         </div>
 
         {/* Main Content */}
@@ -214,7 +213,7 @@ export default function Home() {
 
                 {/* Mobile inline ad */}
                 <div className="lg:hidden w-full">
-                  <AdPlaceholder type="inline" />
+                  <AdPlaceholder type="inline" slot="mobileInline" />
                 </div>
               </div>
 
@@ -230,14 +229,13 @@ export default function Home() {
 
         {/* Right Sidebar Ad (PC only) */}
         <div className="ad-sidebar-container">
-          <AdPlaceholder type="sidebar" />
-          <AdPlaceholder type="sidebar" />
+          <AdPlaceholder type="sidebar" slot="sidebarRight" />
         </div>
       </div>
 
       {/* Bottom Ad */}
       <div className="ad-bottom">
-        <AdPlaceholder type="banner" />
+        <AdPlaceholder type="banner" slot="bottomBanner" />
       </div>
 
       {/* Crop Modal */}
