@@ -27,9 +27,9 @@ declare global {
 
 // Fixed ad sizes matching AdSense ad units
 const AD_SIZES = {
-  banner: { width: '728px', height: '90px', maxWidth: '100%' },
+  banner: { width: '100%', height: '90px', maxWidth: '728px' },
   sidebar: { width: '300px', height: '250px' },
-  inline: { width: '320px', height: '100px', maxWidth: '100%' },
+  inline: { width: '100%', height: '100px', maxWidth: '320px' },
 } as const;
 
 export default function AdPlaceholder({ type, slot, className = '' }: AdPlaceholderProps) {
