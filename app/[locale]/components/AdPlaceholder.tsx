@@ -61,19 +61,43 @@ export default function AdPlaceholder({ type, slot, className = '' }: AdPlacehol
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const loadAd = () => {
       if (adRef.current && !isAdLoaded.current) {
-        try {
-          (window.adsbygoogle = window.adsbygoogle || []).push({});
-          isAdLoaded.current = true;
-        } catch (error) {
-          console.error('AdSense error:', error);
-          setAdFailed(true);
+        const rect = adRef.current.getBoundingClientRect();
+        // Only load ad if container has actual width
+        if (rect.width > 0) {
+          try {
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+            isAdLoaded.current = true;
+          } catch (error) {
+            console.error('AdSense error:', error);
+            setAdFailed(true);
+          }
         }
       }
-    }, 100);
+    };
 
-    return () => clearTimeout(timer);
+    // Initial attempt after mount
+    const timer = setTimeout(loadAd, 100);
+
+    // Observe visibility changes for hidden containers (e.g., mobile sidebar)
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting && !isAdLoaded.current) {
+          loadAd();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (adRef.current) {
+      observer.observe(adRef.current);
+    }
+
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
   }, []);
 
   return (
