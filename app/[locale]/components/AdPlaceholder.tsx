@@ -33,6 +33,7 @@ const AD_SIZES = {
 } as const;
 
 export default function AdPlaceholder({ type, slot, className = '' }: AdPlaceholderProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const adRef = useRef<HTMLModElement>(null);
   const isAdLoaded = useRef(false);
   const uniqueId = useId();
@@ -61,47 +62,70 @@ export default function AdPlaceholder({ type, slot, className = '' }: AdPlacehol
   };
 
   useEffect(() => {
+    const isElementVisible = (el: HTMLElement): boolean => {
+      // Check if element is in DOM and has dimensions
+      if (!el.offsetParent && el.offsetWidth === 0 && el.offsetHeight === 0) {
+        return false;
+      }
+      const rect = el.getBoundingClientRect();
+      return rect.width > 0 && rect.height > 0;
+    };
+
     const loadAd = () => {
-      if (adRef.current && !isAdLoaded.current) {
-        const rect = adRef.current.getBoundingClientRect();
-        // Only load ad if container has actual width
-        if (rect.width > 0) {
-          try {
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-            isAdLoaded.current = true;
-          } catch (error) {
-            console.error('AdSense error:', error);
-            setAdFailed(true);
-          }
-        }
+      if (!containerRef.current || !adRef.current || isAdLoaded.current) {
+        return;
+      }
+
+      // Check both container and ad element visibility
+      if (!isElementVisible(containerRef.current)) {
+        return;
+      }
+
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        isAdLoaded.current = true;
+      } catch {
+        // Silently fail - ad blockers or other issues
+        setAdFailed(true);
       }
     };
 
-    // Initial attempt after mount
-    const timer = setTimeout(loadAd, 100);
+    // Delay initial load to ensure DOM is ready
+    const timer = setTimeout(loadAd, 300);
 
-    // Observe visibility changes for hidden containers (e.g., mobile sidebar)
-    const observer = new IntersectionObserver(
+    // Use IntersectionObserver for visibility
+    const intersectionObserver = new IntersectionObserver(
       (entries) => {
         if (entries[0]?.isIntersecting && !isAdLoaded.current) {
-          loadAd();
+          setTimeout(loadAd, 100);
         }
       },
       { threshold: 0.1 }
     );
 
-    if (adRef.current) {
-      observer.observe(adRef.current);
+    // Use ResizeObserver to detect when container gets width
+    const resizeObserver = new ResizeObserver((entries) => {
+      const entry = entries[0];
+      if (entry && entry.contentRect.width > 0 && !isAdLoaded.current) {
+        loadAd();
+      }
+    });
+
+    if (containerRef.current) {
+      intersectionObserver.observe(containerRef.current);
+      resizeObserver.observe(containerRef.current);
     }
 
     return () => {
       clearTimeout(timer);
-      observer.disconnect();
+      intersectionObserver.disconnect();
+      resizeObserver.disconnect();
     };
   }, []);
 
   return (
     <div
+      ref={containerRef}
       className={`ad-container ${className}`}
       style={containerStyle}
       role="complementary"
